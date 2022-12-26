@@ -17,10 +17,10 @@ public final class Constants {
     //gotta tune all of these hehe
 
     //WHEEL CONSTRAINTS
-    public static final double kDriveWheelDiameterInches = 0; //tuned 3/2
-    public static final double kDriveWheelTrackWidthInches = 0; //tuned 3/2
-    public static final double kDriveWheelRadiusInches = 0;
-    public static final double kTrackScrubFactor = 0;
+    public static final double kDriveWheelDiameterInches = 0; //measure after break
+    public static final double kDriveWheelRadiusInches = kDriveWheelDiameterInches / 2.0;
+    public static final double kDriveWheelTrackWidthInches = 27.637795; //from our code
+    public static final double kTrackScrubFactor = 1.0; //tune, but all teams have it as 1.0
 
     //DYNAMIC CONSTRAINTS
     public static final double kDriveLinearKv = 0; // V per rad/s  
@@ -31,13 +31,14 @@ public final class Constants {
     public static final double kRobotAngularDrag = 0; // N*m / (rad/sec)
     
     //PURE PURSUIT TUNING
-    public static final double kPathKX = 0; // units/s per unit of error
-    public static final double kPathMinLookaheadDistance = 0; // inches
-    public static final double kPathLookaheadTime = 0; // seconds to look ahead along the path for steering
+    public static final double kPathKX = 4.0; // units/s per unit of error
+    public static final double kPathLookaheadTime = 0.4; // seconds to look ahead along the path for steering
+    public static final double kPathMinLookaheadDistance = 24.0; // inches
 
     //TRAJECTORY GENERATOR CONSTRAINTS
     public static final double kMaxVel = 0;
     public static final double kMaxAccel = 0;
     public static final double kMaxCentripetalAccel = 0;
     public static final double kMaxVoltage = 0;
+
 }
